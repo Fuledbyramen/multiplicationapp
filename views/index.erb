@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
+	</head>
+	<style>
+		h1 {text-align:center;}
+		p {text-align:center;}
+		.form-group {float: right; width: 100%;}
+		input {float: right;}
+
+	</style>
+	<body>
+		<div class="container">
+			<h1><%= @greeting %></h1>
+			<p>Enter a Username to get some data</p>
+			<form action ="/" method="POST" class="form-inline">
+				<div class = "form-group">
+				<input type="submit" class = "btn btn-primary">
+				<input type="text" name ="int_to_generate" class="form-control">
+				</div>
+				
+			</form>
+		</div>
+	</body>
+</html>

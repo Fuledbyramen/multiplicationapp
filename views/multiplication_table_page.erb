@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
+	</head>
+	<style>
+		h1 {text-align:center;}
+		p {text-align:center;}
+		.form-group {float: right; width: 100%;}
+		input {float: right;}
+		#submitall{width:100%;}
+
+	</style>
+	<body>
+		<div class="container">
+			<h1>Here is your table for <%= @integer %>! Good luck.</h1>
+
+			<form action ="/results" method="POST" class="form-inline">
+					<% counter = 0 %>
+					<input type="hidden" name="integer" value="<%= @integer %>" />
+					<input type="hidden" name="true_answers" value="<%= @answers %>" />
+					<% @multiplication_table.each do |equation| %>
+						<input type="text" name = <%= "user_answer" + counter.to_s %>  class="form-control">
+						<h2> <%= equation %> </h2>
+						<% counter += 1 %>
+					<% end %>
+
+				<p>&nbsp;</p>
+
+				<input id=submitall type="submit" class = "btn btn-primary">
+
+			</form>
+
+			<p>&nbsp;</p>
+
+			<p>Put another number in for another table</p>
+			<form action ="/" method="POST" class="form-inline">
+				<div class = "form-group">
+				<input type="submit" class = "btn btn-primary">
+				<input type="text" name ="int_to_generate" class="form-control">
+				</div>
+				
+			</form>
+
+		</div>
+	</body>
+</html>
