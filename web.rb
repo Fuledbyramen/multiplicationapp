@@ -11,9 +11,9 @@ def create_table(number)
 		string = (number.to_s + " x " + random_int.to_s)
 		int_set.delete(random_int)
 		if (random_int.to_s).length == 1
-			string += " &nbsp;&nbsp;= ______"
+			string += " &nbsp;&nbsp;= ----------------------------"
 		else
-			string += " = ______"
+			string += " &nbsp;= ----------------------------"
 		end
 		result << string
 		@answer_list << random_int.to_i * number.to_i

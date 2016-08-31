@@ -7,9 +7,29 @@
 		p {text-align:center;}
 		.form-group {float: right; width: 100%;}
 		input {float: right;}
-
+		h1, h2, h3, p { color: white; }
+		body {
+		    background-color:white;
+		    background-image: url('/background1.jpg') !important;
+		    background-repeat:no-repeat;
+		    background-position:top center;
+		    margin:0;
+		    padding:0;
+		}
 	</style>
 	<body>
+
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+	    </div>
+	  </div>
+	</nav>
+
+
 		<div class="container">
 			<h1><%= @greeting %></h1>
 			<p>Enter a Username to get some data</p>
